@@ -86,7 +86,7 @@ function CreateNews() {
     //console.log("Editor Content: ", content);
   };
 
-  const backEndBaseUrl = "http://localhost:8080";
+  const backEndBaseUrl = "https://api.bartaloy24.com";
  let userBio;
  let userId;
  if (typeof window !== "undefined") {

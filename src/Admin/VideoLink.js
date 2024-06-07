@@ -8,7 +8,7 @@ const VideoLink = () => {
 
   const handleAddLink = async () => {
     try {
-      const {data} = await axios.post("http://localhost:8080/api/video/link",{link}); // Replace with your API endpoint
+      const {data} = await axios.post("https://api.bartaloy24.com/api/video/link",{link}); // Replace with your API endpoint
       if(data){
         alert("Link added") 
       }

@@ -23,7 +23,7 @@ function Search() {
 
   const fetchNewsData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/mainSearch", {
+      const response = await axios.get("https://api.bartaloy24.com/mainSearch", {
         params: {
           page: currentPage + 1,
           pageSize: itemsPerPage,

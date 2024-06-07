@@ -17,7 +17,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:8080/api/login",
+      const response = await axios.post("https://api.bartaloy24.com/api/login",
         {
           email,
           password,

@@ -20,24 +20,9 @@ function Home() {
       {!showFooterSearch && (
         <>
           <Firstsection />
-
-
-          {/* <SecondSection />
-          <ThirdAdv />
-          <FourthSection /> */}
-
-
           <FifthSection />
           <SixthSection />
           <SeventhSection />
-
-
-
-
-          {/* <EighthSection />
-          <NinthSection /> */}
-          {/* <TenthSection />
-          <EleventhSection /> */}
         </>
       )}
       <Footer />

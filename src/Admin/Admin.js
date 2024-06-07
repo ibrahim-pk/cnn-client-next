@@ -29,7 +29,7 @@ function Admin() {
 //   Authorization: `Bearer ${token}`,
 // };
 
-  // axios.get("http://localhost:8080/api/isAuth",authUrl)
+  // axios.get("https://api.bartaloy24.com/api/isAuth",authUrl)
   //   .then((response) => {
   //     //console.log("response is: ", response);
   //     setLoading(true)

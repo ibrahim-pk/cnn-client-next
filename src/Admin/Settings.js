@@ -35,7 +35,7 @@ function Settings() {
       setIsLoading(true);
 
       const response = await axios.post(
-        `http://localhost:8080/api/updateUserData/${userid}`,
+        `https://api.bartaloy24.com/api/updateUserData/${userid}`,
         formData,
         authUrl
       );
@@ -85,11 +85,11 @@ function Settings() {
     const fetchUserData = async () => {
       try {
         // console.log(
-        //   "http://localhost:8080/api/user/${userid}",
-        //   `http://localhost:8080/api/user/${userid}`
+        //   "https://api.bartaloy24.com/api/user/${userid}",
+        //   `https://api.bartaloy24.com/api/user/${userid}`
         // );
         const response = await axios.get(
-          `http://localhost:8080/api/user/${userid}`
+          `https://api.bartaloy24.com/api/user/${userid}`
         );
         const userData = response?.data; // Assuming your API returns user data
        console.log("userData is: ", userData);

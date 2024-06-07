@@ -29,7 +29,7 @@ function UseNewsFetch(category, subcategory, type, tag, limit, order) {
         if (order) {
           params.order = order;
         }
-        const response = await axios.get("http://localhost:8080/api/news", {
+        const response = await axios.get("https://api.bartaloy24.com/api/news", {
           params,
         });
         setData(response.data);

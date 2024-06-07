@@ -18,7 +18,7 @@ function NewsList() {
 
   const fetchNewsData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/newsList", {
+      const response = await axios.get("https://api.bartaloy24.com/newsList", {
         params: { page: currentPage + 1, pageSize: itemsPerPage },
       });
       setNewsData(response.data.news);

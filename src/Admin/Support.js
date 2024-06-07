@@ -18,7 +18,7 @@ const SupportForm = ({ userRole }) => {
     // Fetch support details from the database
     const fetchSupportDetails = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/support");
+        const response = await axios.get("https://api.bartaloy24.com/api/support");
         setSupportDetails(response?.data);
       } catch (error) {
         console.error("Error fetching support details:", error?.response?.data);
@@ -43,7 +43,7 @@ const SupportForm = ({ userRole }) => {
     try {
      // console.log("formData is: ", formData);
       const response = await axios.post(
-        "http://localhost:8080/api/support",
+        "https://api.bartaloy24.com/api/support",
         formData,
         authUrl
       );
@@ -51,7 +51,7 @@ const SupportForm = ({ userRole }) => {
       setSubmittedData(formData);
       // Fetch the latest support details after successful submission
       const updatedSupportDetails = await axios.get(
-        "http://localhost:8080/api/support"
+        "https://api.bartaloy24.com/api/support"
       );
       setSupportDetails(updatedSupportDetails?.data);
     } catch (error) {

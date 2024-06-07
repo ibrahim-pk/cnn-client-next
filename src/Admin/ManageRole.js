@@ -22,7 +22,7 @@ const ManageRole = () => {
     e.preventDefault();
     setIsPasswordFocused(false);
     try {
-      const response = await axios.post("http://localhost:8080/api/register", {
+      const response = await axios.post("https://api.bartaloy24.com/api/register", {
         email,
         password,
       });
@@ -62,7 +62,7 @@ const ManageRole = () => {
   useEffect(() => {
     // Fetch user data from MongoDB Atlas using axios
     axios
-      .get("http://localhost:8080/api/users")
+      .get("https://api.bartaloy24.com/api/users")
       .then((response) => {
         setUsers(response.data);
         setLoading(false);
@@ -73,7 +73,7 @@ const ManageRole = () => {
   useEffect(() => {
     // Fetch available roles
     axios
-      .get("http://localhost:8080/api/getRoles")
+      .get("https://api.bartaloy24.com/api/getRoles")
       .then((response) => setRoles(response?.data))
       .catch((error) => console.error("Error fetching roles:", error));
   }, []);
@@ -83,7 +83,7 @@ const ManageRole = () => {
    // console.log("role userid: ", userId);
     //console.log("role selectedRole: ", selectedRole);
     axios
-      .post(`http://localhost:8080/api/assignRole/${userId}`, {
+      .post(`https://api.bartaloy24.com/api/assignRole/${userId}`, {
         role: selectedRole,
       },
       authUrl

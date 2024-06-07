@@ -126,7 +126,7 @@ function UpdateNews() {
   useEffect(() => {
     const fetchTypes = async () => {
       try {
-        const typeResponse = await axios.get("http://localhost:8080/api/types"); // Replace with your API endpoint
+        const typeResponse = await axios.get("https://api.bartaloy24.com/api/types"); // Replace with your API endpoint
         setTypes(typeResponse?.data);
         //console.log("types is :", typeResponse.data);
       } catch (error) {
@@ -139,7 +139,7 @@ function UpdateNews() {
   useEffect(() => {
     const fetchTags = async () => {
       try {
-        const tagResponse = await axios.get("http://localhost:8080/api/tags"); // Replace with your API endpoint
+        const tagResponse = await axios.get("https://api.bartaloy24.com/api/tags"); // Replace with your API endpoint
         setTags(tagResponse?.data);
         //console.log("tags is :", tagResponse.data);
       } catch (error) {
@@ -152,7 +152,7 @@ function UpdateNews() {
   useEffect(() => {
     // Fetch data from the API
     axios
-      .get("http://localhost:8080/api/getAllNewsCategories")
+      .get("https://api.bartaloy24.com/api/getAllNewsCategories")
       .then((response) => {
         // Assuming the API response data is an array of categories
         const getAllcategories = response?.data;
@@ -169,7 +169,7 @@ function UpdateNews() {
     if (selectedNewsCategory) {
       axios
         .get(
-          `http://localhost:8080/api/getSubcategories/${selectedNewsCategory}`
+          `https://api.bartaloy24.com/api/getSubcategories/${selectedNewsCategory}`
         )
         .then((response) => {
           setSubcategories(response?.data);
@@ -185,7 +185,7 @@ function UpdateNews() {
     const fetchNewsData = async () => {
       if (id) {
         axios
-          .get(`http://localhost:8080/getNewsByID/${id}`)
+          .get(`https://api.bartaloy24.com/getNewsByID/${id}`)
           .then((res) => {
             // Set the news data
             // setNews(res.data);
@@ -209,7 +209,7 @@ function UpdateNews() {
             //console.log("File type:", fileType);
             axios
               .get(
-                `http://localhost:8080/filesForNewsByFilename/${res.data?.file}`,
+                `https://api.bartaloy24.com/filesForNewsByFilename/${res.data?.file}`,
                 { responseType: "arraybuffer" }
               )
               .then((res) => {
@@ -281,7 +281,7 @@ function UpdateNews() {
     // console.log("authorName ", authorName);
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/updatenews",
+        "https://api.bartaloy24.com/api/updatenews",
         newsData,
         authUrl
       );

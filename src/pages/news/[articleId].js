@@ -49,7 +49,7 @@ function Article() {
       const fetchArticle = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:8080/api/getNewsByArticleId/${router.query.articleId}`
+            `https://api.bartaloy24.com/api/getNewsByArticleId/${router.query.articleId}`
           );
           setArticle(response?.data);
           setLoading(false);

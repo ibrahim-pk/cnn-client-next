@@ -12,7 +12,7 @@ export const PrivateRoute = ({ children }) => {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/isAuth", authUrl);
+                const response = await axios.get("https://api.bartaloy24.com/api/isAuth", authUrl);
                 if (response?.data?.Role) {
                     setRole(true);
                     localStorage.setItem("userRole", JSON.stringify(response?.data?.Role))

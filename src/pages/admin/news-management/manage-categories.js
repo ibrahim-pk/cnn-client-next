@@ -13,7 +13,7 @@ const ManageCategories = () => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/AllCategoriesWithSubCategory"
+        "https://api.bartaloy24.com/api/AllCategoriesWithSubCategory"
       ); // Replace with your API endpoint
       setCategories(response?.data);
     } catch (error) {
@@ -27,7 +27,7 @@ const ManageCategories = () => {
     //console.log("categoryId is ", categoryId);
     try {
       await axios.delete(
-        `http://localhost:8080/api/deleteCategories/${categoryId}`,
+        `https://api.bartaloy24.com/api/deleteCategories/${categoryId}`,
         authUrl
 
       ); // Replace with your API endpoint
@@ -41,7 +41,7 @@ const ManageCategories = () => {
   const handleDeleteSubcategory = async (categoryId, subcategoryId) => {
     try {
       await axios.delete(
-        `http://localhost:8080/api/categories/${categoryId}/subcategories/${subcategoryId}`,
+        `https://api.bartaloy24.com/api/categories/${categoryId}/subcategories/${subcategoryId}`,
         authUrl
       ); // Replace with your API endpoint
       // Refresh the categories after deletion
@@ -61,7 +61,7 @@ const ManageCategories = () => {
     //   parentCategory: selectedParentCategory,
     // });
     try {
-      await axios.post("http://localhost:8080/api/addCategories", {
+      await axios.post("https://api.bartaloy24.com/api/addCategories", {
         name: categoryName,
         subcategories: subcategoryName,
         parentCategory: selectedParentCategory,

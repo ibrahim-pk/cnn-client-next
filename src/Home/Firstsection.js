@@ -35,7 +35,7 @@ function Firstsection() {
   useEffect(()=>{
   const fetchData=async()=>{
     try {
-      const {data} = await axios.get("http://localhost:8080/api/video/link"); // Replace with your API endpoint
+      const {data} = await axios.get("https://api.bartaloy24.com/api/video/link"); // Replace with your API endpoint
       if(data){
         setLink((data?.data))
         //console.log(data.data)

@@ -64,7 +64,7 @@ const NewsTable = ({ data, setData, onPageChange }) => {
 
   const confirmDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8080/api/news/${deletedItemId}`,authUrl);
+      await axios.delete(`https://api.bartaloy24.com/api/news/${deletedItemId}`,authUrl);
 
      // console.log("Before deletion:", newsData);
       // Update the state to remove the deleted item
@@ -105,7 +105,7 @@ const NewsTable = ({ data, setData, onPageChange }) => {
   const handleApprove=async(id,x)=>{
     try{
       const {data} = await axios.post(
-        "http://localhost:8080/api/updatenews",
+        "https://api.bartaloy24.com/api/updatenews",
         {pb:x,
           id:id
         },

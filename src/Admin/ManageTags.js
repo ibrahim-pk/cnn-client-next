@@ -10,7 +10,7 @@ const ManageTag = () => {
 
   const fetchTag = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/tags"); // Replace with your API endpoint
+      const response = await axios.get("https://api.bartaloy24.com/api/tags"); // Replace with your API endpoint
       setTag(response.data);
      // console.log("tags are :", response.data);
     } catch (error) {
@@ -23,7 +23,7 @@ const ManageTag = () => {
   const handleDeleteTag = async (TagId) => {
     //console.log("TagId is ", TagId);
     try {
-      await axios.delete(`http://localhost:8080/api/deleteTag/${TagId}`,
+      await axios.delete(`https://api.bartaloy24.com/api/deleteTag/${TagId}`,
         authUrl
       ); // Replace with your API endpoint
       // Refresh the Tag after deletion
@@ -38,7 +38,7 @@ const ManageTag = () => {
     //   name: TagName,
     // });
     try {
-      await axios.post("http://localhost:8080/api/addTag", {
+      await axios.post("https://api.bartaloy24.com/api/addTag", {
         name: TagName,
       },
       authUrl
