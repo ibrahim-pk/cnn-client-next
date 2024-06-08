@@ -39,25 +39,49 @@ function Article() {
 
   const { data: allCards, loading: loading1, error: error1 } = UseNewsFetch("Latest", null, null, null, 6, "desc");
 
+  // useEffect(() => {
+  //   // Check if router is ready and has the articleId
+  //   if (!router.isReady) return;
+  //   console.log("Router query:", router.query);
+  //   console.log("Article ID:", router.query.articleId);
+
+  //   if (router.query.articleId) {
+  //     const fetchArticle = async () => {
+  //       try {
+  //         const response = await axios.get(
+  //           `https://api.bartaloy24.com/api/getNewsByArticleId/${router.query.articleId}`
+  //         );
+  //         setArticle(response?.data);
+  //         setLoading(false);
+  //       } catch (error) {
+  //         setError(error?.message);
+  //         setLoading(false);
+  //       }
+  //     };
+  //     fetchArticle();
+  //   } else {
+  //     setError("Invalid Article ID");
+  //     setLoading(false);
+  //   }
+  // }, [router.isReady, router.query.articleId]);
+
   useEffect(() => {
-    // Check if router is ready and has the articleId
     if (!router.isReady) return;
-    console.log("Router query:", router.query);
-    console.log("Article ID:", router.query.articleId);
+
+    const fetchArticle = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.bartaloy24.com/api/getNewsByArticleId/${router.query.articleId}`
+        );
+        setArticle(response?.data);
+        setLoading(false);
+      } catch (error) {
+        setError(error?.message);
+        setLoading(false);
+      }
+    };
 
     if (router.query.articleId) {
-      const fetchArticle = async () => {
-        try {
-          const response = await axios.get(
-            `https://api.bartaloy24.com/api/getNewsByArticleId/${router.query.articleId}`
-          );
-          setArticle(response?.data);
-          setLoading(false);
-        } catch (error) {
-          setError(error?.message);
-          setLoading(false);
-        }
-      };
       fetchArticle();
     } else {
       setError("Invalid Article ID");
@@ -65,18 +89,23 @@ function Article() {
     }
   }, [router.isReady, router.query.articleId]);
 
+
   if (loading) return <Loader />;
   if (error) return <div>Error: {error}</div>;
 
   moment.locale("bn");
   const formattedDate = moment(article?.createdAt).format("LL");
   const formattedTime = moment(article?.createdAt).format("LTS");
+
   const shareUrl = `https://www.bartaloy24.com/news/${router.query.articleId}`;
   const strippedDescription = stripHtml(article?.editorText)?.result;
 
   return (
     <>
-    <MetaDecorator title={article?.title} description={strippedDescription} baseUrl={shareUrl}  imageUrl={article?.file} />
+    {
+      article&&(
+        <div>
+          <MetaDecorator title={article?.title} description={strippedDescription} baseUrl={shareUrl}  imageUrl={article?.file} />
       <Header />
       <div className="flex flex-wrap mx-2 md:mx-5 lg:mx-5">
         <div className="w-full md:w-3/4 p-4">
@@ -190,6 +219,9 @@ function Article() {
         </div>
       </div>
       <Footer />
+        </div>
+      )
+    }
     </>
   );
 }
