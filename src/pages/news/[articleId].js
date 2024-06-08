@@ -71,7 +71,7 @@ function Article() {
   moment.locale("bn");
   const formattedDate = moment(article?.createdAt).format("LL");
   const formattedTime = moment(article?.createdAt).format("LTS");
-  const shareUrl = `http://bartaloy24.com/news/${router.query.articleId}`;
+  const shareUrl = `https://www.bartaloy24.com/news/${router.query.articleId}`;
   const strippedDescription = stripHtml(article?.editorText)?.result;
 
   return (
