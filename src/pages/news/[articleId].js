@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import axios from "axios";
 import moment from "moment";
 import "moment/locale/bn";
@@ -53,7 +54,7 @@ function Article({ article, error }) {
     <>
       {article && (
         <div>
-          <MetaDecorator title={article.title} description={strippedDescription} baseUrl={shareUrl} imageUrl="https://drive.usercontent.google.com/download?id=1EP0-XKXebUxV2ZG_OS3dWHDDoyE1Pxju&export=view&authuser=0" />
+          <MetaDecorator title={article.title} description={strippedDescription} baseUrl={shareUrl} imageUrl={article.file} />
           <Header />
           <div className="flex flex-wrap mx-2 md:mx-5 lg:mx-5">
             <div className="w-full md:w-3/4 p-4">
@@ -108,13 +109,11 @@ function Article({ article, error }) {
               </div>
               <div className="content pt-6">
                 <div className="image-box bg-gray-100">
-                  <Image
-                    src={extractFileId(article.file)}
+                  <img
+                    src={article.file}
                     alt=""
                     className="w-full h-full object-cover transition-transform transform group-hover:scale-100"
-                    layout="responsive"
-                    height="500"
-                    width="500"
+                    
                   />
                 </div>
                 <div
@@ -140,12 +139,11 @@ function Article({ article, error }) {
                 <a href="https://www.facebook.com/bartaloy24">
                   <div className="w-full h-64 group mb-4">
                     <div className="w-full h-full group">
-                      <Image
+                      <img
                         src="/images/Article/bartaloy.jpg"
-                        alt=""
+                        alt="bartaloy24"
                         className="w-full h-full object-cover "
-                        height="100"
-                        width="100"
+                        
                       />
                     </div>
                     <div className="text-xs">Advertisement</div>

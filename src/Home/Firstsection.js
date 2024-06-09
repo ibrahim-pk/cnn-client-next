@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import Link from 'next/link'
 import axios from "axios";
@@ -109,14 +110,12 @@ function Firstsection() {
               <div className="max-w-screen-md mx-auto mb-3">
                 <div className="aspect-w-16 aspect-h-9">
                   {breaking && breaking.length > 0 ? (
-                    <Image
-                    src={extractFileId(breaking[0]?.file)}
+                    <img
+                    src={breaking[0]?.file}
                     alt=""
                     className="w-full h-full object-cover transition-transform transform group-hover:scale-100"
-                    layout="responsive"
-                    height="500"
-                    width="500"
-            />
+                   
+                  />
                   ) : (
                     ""
                   )}

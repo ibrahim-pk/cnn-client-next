@@ -8,7 +8,7 @@ export default function Home() {
   // let imgUrl=extractFileId(url)
   return (
     <>
-       {/* <Image src={imgUrl} alt='' height="100" width="100"/> */}
+       {/* <img src="https://i.imgur.com/RO5rZsQ.jpg" alt='' height="100" width="100"/> */}
        <Head>
        <meta name="google-site-verification" content="xsk8qagysJtZHM5JN6P1VXaAyb6EDeWBU2wEL99DaWI" />
        </Head>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 // import Pagination from "./Pagination";
 import Link from "next/link";
@@ -14,7 +15,8 @@ const SearchResult = ({ data, newsCount, searchText }) => {
   const [newsData, setNewsData] = useState(data);
   const filteredData = data.filter(
     (item) =>
-      item?.title && item?.title.toLowerCase().includes(searchTerm.toLowerCase())
+      item?.title &&
+      item?.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // const pageCount = Math.ceil(filteredData.length / itemsPerPage);
@@ -49,16 +51,11 @@ const SearchResult = ({ data, newsCount, searchText }) => {
             <div key={item?._id}>
               <div className="flex items-center py-4 border-b border-b-gray-200">
                 <div className="w-1/3 h-48 mr-5">
-                  
-                  <Image
-            src={extractFileId(item?.file)}
-            alt=""
-            className="w-full h-full object-cover transition-transform transform group-hover:scale-100"
-            layout="responsive"
-            height="500"
-            width="500"
-            />
-                  
+                  <img
+                    src={item?.file}
+                    alt="bartaloy24"
+                    className="w-full h-full object-cover transition-transform transform group-hover:scale-100"
+                  />
                 </div>
                 <div className="w-2/3">
                   <div className="font-bold text-2xl">{item?.title}</div>

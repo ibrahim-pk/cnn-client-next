@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from 'next/link'
 import FileDisplay from "@/Helpers/FileDisplay";
@@ -11,17 +12,15 @@ function MidCard({ link, imageSrc, tag, text, horizontal, color, db }) {
       <div className={` ${horizontal ? "p-2" : ""} ${color ? "bg-black" : ""}`}>
         <div className="relative w-305 h-171 group">
           {db ? (
-            <Image
-            src={extractFileId(imageSrc)}
+            <img
+            src={imageSrc}
             alt=""
             className="w-full h-full object-cover transition-transform transform group-hover:scale-100"
-            layout="responsive"
-            height="500"
-            width="500"
+            
             />
           ) : (
-            <Image
-              src={extractFileId(imageSrc)}
+            <img
+              src={imageSrc}
               alt=""
               className="w-full h-full object-cover transition-transform transform group-hover:scale-100"
               layout="responsive"

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
 import FileDisplay from "../../Helpers/FileDisplay";
@@ -8,13 +9,11 @@ function SmallHorizontalCard({ _id, file, title }) {
   return (
     <div className=" flex mt-2 border-t pt-4">
         <div className="relative  group w-1/4">
-        <Image
-            src={extractFileId(file)}
+        <img
+            src={file}
             alt=""
             className="w-full h-full object-cover transition-transform transform group-hover:scale-100"
-            layout="responsive"
-            height="500"
-            width="500"
+
             />
         </div>
 

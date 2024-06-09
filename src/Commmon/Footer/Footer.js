@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -199,12 +200,11 @@ function Footer({ SearchText }) {
         <div className="bg-black w-full pt-8 pb-8 px-5 flex flex-col items-center md:items-start text white border-t border-b border-gray-700">
           <div className=" w-full flex items-center justify-between flex-col md:flex-row">
             <div className="flex items-center">
-              <Image
+              <img
                 src="/images/Header/bartaloy24.png"
                 alt=""
                 className="w-auto h-24 mr-4"
-                height="24"
-                width="100"
+               
               />
             </div>
             <div className="flex items-center mt-4 md:mt-0">
@@ -227,23 +227,20 @@ function Footer({ SearchText }) {
             <a
                 href="https://www.facebook.com/bartaloy24"
                 className="text-white text-[0.937rem] font-bold mx-4">
-                <Image
+                <img
                   src="/images/Footer/Facebook.png"
                   className="h-8 w-8"
                   alt=""
-                  height="8"
-                  width="8"
+                  
                 />
               </a>
               <a
                 href="https://www.youtube.com/@bartaloy24"
                 className="text-white text-[0.937rem] font-bold mx-4">
-                <Image
+                <img
                   src="/images/Footer/youtube.png"
                   className="h-8 w-8"
                   alt=""
-                  height="8"
-                  width="8"
                 />
               </a>
             </div>
@@ -313,12 +310,11 @@ function Footer({ SearchText }) {
         <div className="bg-black w-full pt-8 pb-8 px-5 flex flex-col items-start text white border-t border-b border-gray-700">
           <div className=" w-full flex items-center justify-between">
             <div className="flex items-center">
-              <Image
+              <img
                 src="/images/Header/bartaloy24.png"
                 alt=""
                 className="w-auto h-24 mr-4"
-                height="100"
-                width="150"
+      
               />
              
             </div>
@@ -345,23 +341,20 @@ function Footer({ SearchText }) {
               <a
                 href="https://www.facebook.com/bartaloy24"
                 className="text-white text-[0.937rem] font-bold mx-4">
-                <Image
+                <img
                   src="/images/Footer/Facebook.png"
                   className="h-full w-full"
                   alt=""
-                  height="100"
-                  width="100"
                 />
               </a>
               <a
                 href="https://www.youtube.com/@bartaloy24"
                 className="text-white text-[0.937rem] font-bold mx-4">
-                <Image
+                <img
                   src="/images/Footer/youtube.png"
                   className="h-8 w-8"
                   alt=""
-                  height="8"
-                  width="8"
+                 
                 />
               </a>
               {/* <NavLink
