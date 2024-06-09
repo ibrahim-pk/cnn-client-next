@@ -53,7 +53,7 @@ function Article({ article, error }) {
     <>
       {article && (
         <div>
-          <MetaDecorator title={article.title} description={strippedDescription} baseUrl={shareUrl} imageUrl="http://res.cloudinary.com/ditdynru4/image/upload/v1677350769/WinnerImg/ftkekgk31hbv6u7qms5n.jpg" />
+          <MetaDecorator title={article.title} description={strippedDescription} baseUrl={shareUrl} imageUrl="https://drive.usercontent.google.com/download?id=1EP0-XKXebUxV2ZG_OS3dWHDDoyE1Pxju&export=view&authuser=0" />
           <Header />
           <div className="flex flex-wrap mx-2 md:mx-5 lg:mx-5">
             <div className="w-full md:w-3/4 p-4">
