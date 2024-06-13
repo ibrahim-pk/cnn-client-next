@@ -119,7 +119,7 @@ function SixthSection() {
           <ColumnHead columnHeadTag="খেলাধুলা" />
           <MidCard 
             
-            link={`/${allCards[0]?._id}`}
+            link={`/news/${allCards[0]?._id}`}
             imageSrc={allCards[0]?.file}
             text={allCards[0]?.title}
             tag={allCards[0]?.tag}
@@ -127,7 +127,7 @@ function SixthSection() {
             />
           {allCards&&allCards.map((card, index) =>card?.pb &&(
             <TextOnly key={index}
-             link={card._id}
+             link={`/news/${card._id}`}
              text={card.title}
             />
           ))}
@@ -138,7 +138,7 @@ function SixthSection() {
           <ColumnHead columnHeadTag="শিক্ষাঙ্গন" />
           <MidCard 
             
-            link={`/${allCards1[0]?._id}`}
+            link={`/news/${allCards1[0]?._id}`}
             imageSrc={allCards1[0]?.file}
             text={allCards1[0]?.title}
             tag={allCards1[0]?.tag}
@@ -146,7 +146,7 @@ function SixthSection() {
             />
           {allCards1&&allCards1.map((card, index) => card?.pb &&(
             <TextOnly key={index}
-             link={card._id}
+            link={`/news/${card._id}`}
              text={card.title}
             />
           ))}
@@ -157,7 +157,7 @@ function SixthSection() {
           <ColumnHead columnHeadTag="বিজ্ঞান" />
           <MidCard 
             
-            link={`/${allCards2[0]?._id}`}
+            link={`/news/${allCards2[0]?._id}`}
             imageSrc={allCards2[0]?.file}
             text={allCards2[0]?.title}
             tag={allCards2[0]?.tag}
@@ -165,7 +165,7 @@ function SixthSection() {
             />
           {allCards2&&allCards2.map((card, index) =>card?.pb && (
             <TextOnly key={index}
-             link={card._id}
+            link={`/news/${card._id}`}
              text={card.title}
             />
           ))}
