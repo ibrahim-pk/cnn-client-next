@@ -8,8 +8,7 @@ User-agent: *
 Allow: /
 
 #Host
-Host:https://www.bartaloy24.com
+Host:https://bartaloy24.com
 
 #Sitemap
-Sitemap:https://www.bartaloy24.com/sitemap.xml
-
+Sitemap:https://bartaloy24.com/sitemap.xml

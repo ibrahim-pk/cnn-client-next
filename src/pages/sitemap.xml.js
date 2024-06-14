@@ -1,44 +1,44 @@
 import axios from "axios";
 
 //pages/sitemap.xml.js
-const EXTERNAL_DATA_URL = 'https://www.bartaloy24.com/';
+const EXTERNAL_DATA_URL = 'https://bartaloy24.com/';
 
 function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <!--We manually set the two URLs we know already-->
      <url>
-       <loc>https://www.bartaloy24.com</loc>
+       <loc>https://bartaloy24.com</loc>
      </url>
      <url>
-       <loc>https://www.bartaloy24.com/category/Latest</loc>
+       <loc>https://bartaloy24.com/category/Latest</loc>
      </url>
      <url>
-       <loc>https://www.bartaloy24.com/category/Politics</loc>
+       <loc>https://bartaloy24.com/category/Politics</loc>
      </url>
      <url>
-       <loc>https://www.bartaloy24.com/category/National</loc>
+       <loc>https://bartaloy24.com/category/National</loc>
      </url>
      <url>
-       <loc>https://www.bartaloy24.com/category/Crime</loc>
+       <loc>https://bartaloy24.com/category/Crime</loc>
      </url>
      <url>
-       <loc>https://www.bartaloy24.com/category/World</loc>
+       <loc>https://bartaloy24.com/category/World</loc>
      </url>
      <url>
-       <loc>https://www.bartaloy24.com/category/Science</loc>
+       <loc>https://bartaloy24.com/category/Science</loc>
      </url>
      <url>
-       <loc>https://www.bartaloy24.com/category/Education</loc>
+       <loc>https://bartaloy24.com/category/Education</loc>
      </url>
        <url>
-       <loc>https://www.bartaloy24.com/category/Health</loc>
+       <loc>https://bartaloy24.com/category/Health</loc>
      </url>
      <url>
-       <loc>https://www.bartaloy24.com/category/Entertainment</loc>
+       <loc>https://bartaloy24.com/category/Entertainment</loc>
      </url>
      <url>
-       <loc>https://www.bartaloy24.com/category/Sports</loc>
+       <loc>https://bartaloy24.com/category/Sports</loc>
      </url>
      ${posts?.map((item) => {
          return `
