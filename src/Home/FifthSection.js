@@ -58,6 +58,7 @@ function FifthSection() {
             //  link={card?._id}
             link={`/news/${card?._id}`}
              text={card?.title}
+             
             />
           ))}
         </div>

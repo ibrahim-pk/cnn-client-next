@@ -1,5 +1,15 @@
-# https://www.robotstxt.org/robotstxt.html
+# Block all crawlers for /accounts
 User-agent: *
-Disallow:/login
+Disallow:/auth/login
 Disallow:/admin
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+#Host
+Host:https://www.bartaloy24.com
+
+#Sitemap
+Sitemap:https://www.bartaloy24.com/sitemap.xml
 
