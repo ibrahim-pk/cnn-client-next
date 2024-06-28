@@ -55,7 +55,6 @@ function Login() {
       <div className="flex flex-col items-center pt-8 pb-10 justify-center bg-red-100">
         <div className="max-w-lg w-full p-10 bg-white rounded-xl shadow-lg">
           <div className="flex flex-col items-center">
-            <img src="/images/Header/logo.png" className="w-auto h-12" alt="" />
             <h2 className="mt-6 text-center text-2xl font-extrabold text-gray-900">
               Log in to your bartaloy24 account
             </h2>

@@ -47,7 +47,7 @@ function Article({ article, error }) {
   const formattedDate = moment(article.createdAt).format("LL");
   const formattedTime = moment(article.createdAt).format("LTS");
 
-  const shareUrl = `https://www.bartaloy24.com/news/${router.query.articleId}`;
+  const shareUrl = `https://bartaloy24.com/news/${router.query.articleId}`;
   const strippedDescription = stripHtml(article.editorText).result;
 
   return (

@@ -110,20 +110,20 @@ function Nav({ onSearchButtonClick }) {
             </Link>
           </div>
           <div className="flex basis-1/4 justify-evenly items-center ">
-            <Link
-              href="/category/Watch"
+          <Link
+              href="/category/Distric"
               className="text-white text-[0.937rem] font-bold">
-              ভিডিও
+              বিভাগ
             </Link>
             <Link
-              href="/category/Listen"
+              href="/category/Zila"
               className="text-white text-[0.937rem] font-bold">
-              অডিও
+              জেলা
             </Link>
             <Link
-              href="/category/live-tv"
+              href="/category/Local"
               className="text-white text-[0.937rem] font-bold">
-              লাইভ টিভি
+              স্থানীয়
             </Link>
             <div className=" cursor-pointer" onClick={onSearchButtonClick}>
               <svg
@@ -295,19 +295,19 @@ function Nav({ onSearchButtonClick }) {
           </div>
           <div className="flex basis-1/4 justify-evenly items-center ">
             <Link
-              href="/category/Watch"
+              href="/category/Distric"
               className="text-white text-[0.937rem] font-bold">
-              ভিডিও
+              বিভাগ
             </Link>
             <Link
-              href="/category/Listen"
+              href="/category/Zila"
               className="text-white text-[0.937rem] font-bold">
-              অডিও
+              জেলা
             </Link>
             <Link
-              href="/category/live-tv"
+              href="/category/Local"
               className="text-white text-[0.937rem] font-bold">
-              লাইভ টিভি
+              স্থানীয়
             </Link>
             <div className=" cursor-pointer" onClick={onSearchButtonClick}>
               <svg
